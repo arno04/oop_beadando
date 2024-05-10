@@ -34,7 +34,6 @@ class Foglalas:
                 print("Ez a szoba már foglalt ezen a napon.")
                 return
         self.foglalasok.append((szoba, datum))
-        print("Sikeres foglalás.")
 
     def lemondas(self, szoba, datum):
         if (szoba, datum) in self.foglalasok:
@@ -81,7 +80,7 @@ while True:
             print("Hibás dátumformátum!")
             continue
         foglalas.foglalas(be_szobaszam, datum)
-        foglalas.listaz_foglalasok()
+        print("Sikeres foglalás"!)
     elif valasztas == "2":
         szobaszam = input("Adja meg a lemondandó foglalás szoba számát: ")
         be_datum = input("Adja meg a lemondandó foglalás dátumát (ÉÉÉÉ-HH-NN formátumban): ")
@@ -91,7 +90,6 @@ while True:
             print("Hibás dátumformátum!")
             continue
         foglalas.lemondas(szobaszam, datum)
-        foglalas.listaz_foglalasok()
     elif valasztas == "3":
         foglalas.listaz_foglalasok()
     else:
